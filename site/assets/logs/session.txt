@@ -1,0 +1,1 @@
+2015-09-29 15:45:47	admin	http://localhost/processwire/login/	Successful login for 'admin'

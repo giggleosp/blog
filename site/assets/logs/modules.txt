@@ -1,0 +1,13 @@
+2015-09-29 15:45:36	?	?	Saved module 'SystemUpdater' config data
+2015-09-29 15:45:36	?	?	Saved module info cache
+2015-09-29 15:45:36	guest	http://localhost/http404/	Saved module info cache
+2015-09-29 15:45:37	guest	http://localhost/http404/	Installed module 'ProcessRecentPages'
+2015-09-29 15:45:37	guest	http://localhost/http404/	Saved module info cache
+2015-09-29 15:45:37	guest	http://localhost/http404/	Saved module 'SystemUpdater' config data
+2015-09-29 15:45:37	guest	http://localhost/http404/	Saved module 'AdminThemeDefault' config data
+2015-09-29 15:45:43	guest	http://localhost/processwire/login/	Saved module info cache
+2015-09-29 15:45:43	guest	http://localhost/processwire/login/	Installed module 'ProcessLogger'
+2015-09-29 15:45:43	guest	http://localhost/processwire/login/	Saved module info cache
+2015-09-29 15:45:43	guest	http://localhost/processwire/login/	Installed module 'InputfieldIcon'
+2015-09-29 15:45:43	guest	http://localhost/processwire/login/	Saved module info cache
+2015-09-29 15:45:43	guest	http://localhost/processwire/login/	Saved module 'SystemUpdater' config data
