@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to ProcessWire 2.6
 
 This document is in Markdown. An HTML formatted version of this document 
@@ -410,3 +411,6 @@ Get support in the ProcessWire forum at:
 
 ProcessWire, Copyright 2015 by Ryan Cramer Design, LLC
 
+=======
+# blog
+>>>>>>> a874ed23be3fa754a3c7dc4772a1349d842e9be0
