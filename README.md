@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Welcome to ProcessWire 2.6
 
 This document is in Markdown. An HTML formatted version of this document 

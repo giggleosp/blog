@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 
 /**
  * _main.php
@@ -36,26 +36,77 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title><?php echo $title; ?></title>
 	<meta name="description" content="<?php echo $page->summary; ?>" />
-	<link href='//fonts.googleapis.com/css?family=Lusitana:400,700|Quattrocento:400,700' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="<?php echo $config->urls->templates?>styles/material.min.css">
+	<script src="<?php echo $config->urls->templates?>scripts/material.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates?>styles/main.css" />
 </head>
 <body class="<?php if($sidebar) echo "has-sidebar "; ?>">
+	<!-- Uses a header that scrolls with the text, rather than staying
+	 	 locked at the top -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title"><a href="/" style="text-decoration:none;color:white">Giggle</a></span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation -->
+				<nav class="main mdl-navigation mdl-layout--large-screen-only">
+					<?php 
+				// top navigation consists of homepage and its visible children
+				foreach($homepage->
+					and($homepage->children) as $item) {
+					echo "
+					<a class='mdl-navigation__link' href='$item->url'>$item->title</a>
+					";
+				}
 
-	<!-- top navigation -->
-	<ul class='topnav'><?php 
-		// top navigation consists of homepage and its visible children
-		foreach($homepage->and($homepage->children) as $item) {
-			if($item->id == $page->rootParent->id) {
-				echo "<li class='current'>";
-			} else {
-				echo "<li>";
-			}
-			echo "<a href='$item->url'>$item->title</a></li>";
-		}
+				// output an "Edit" link if this page happens to be editable by the current user
+				if($page->editable()) echo "
+					<a class='mdl-navigation__link' href='$page->editUrl'>Edit</a>
+					";
+			  ?>
+				</nav>
+				<div class="nav-search-left-spacer"></div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+	                  mdl-textfield--floating-label mdl-textfield--align-right">
+					<label class="mdl-button mdl-js-button mdl-button--icon"
+	               for="fixed-header-drawer-exp"> <i class="material-icons">search</i>
+					</label>
+					<div class="mdl-textfield__expandable-holder">
+						<form class='search' action='<?php echo $pages->
+							get('template=search')->url; ?>' method='get'>
+							<input class="mdl-textfield__input" type='text' id="fixed-header-drawer-exp" name='q' placeholder='Search' value='<?php echo $sanitizer->entities($input->whitelist('q')); ?>' /></form>
+					</div>
+				</div>
+			</div>
+		</header>
+	  <div class="mdl-layout__drawer">
+	    <span class="mdl-layout-title"><a href="/" style="text-decoration:none;color:#3F51B5">Giggle</a></span>
+	    <nav class="mdl-navigation">
+	      <?php 
+				// top navigation consists of homepage and its visible children
+				foreach($homepage->and($homepage->children) as $item) {
+					// if($item->id == $page->rootParent->id) {
+					// 	echo "<li class='current'>";
+					// } else {
+					// 	echo "<li>";
+					// }
+					echo "<a class='mdl-navigation__link' href='$item->url'>$item->title</a></li>";
+				}
 
-		// output an "Edit" link if this page happens to be editable by the current user
-		if($page->editable()) echo "<li class='edit'><a href='$page->editUrl'>Edit</a></li>";
-	?></ul>
+				// output an "Edit" link if this page happens to be editable by the current user
+				if($page->editable()) echo "<a class='mdl-navigation__link' href='$page->editUrl'>Edit</a>";
+			?>
+	    </nav>
+	  </div>
+	  <main class="mdl-layout__content">
+	    <div class="page-content"><!-- Your content goes here --></div>
+	  </main>
+	</div>
 
 	<!-- search form-->
 	<form class='search' action='<?php echo $pages->get('template=search')->url; ?>' method='get'>
@@ -73,38 +124,54 @@
 		echo "<span>$page->title</span> "; 
 	?></div>
 
-	<div id='main'>
+	<div id="main">
+		<!-- Wide card with share menu button -->
+	<style>
+	.demo-card-wide > .mdl-card__title {
+	  background: url("<?php echo $image->url; ?>") center / cover;
+	}
+	</style>
 
-		<!-- main content -->
-		<div id='content'>
-			<h1><?php echo $title; ?></h1>
-			<?php echo $content; ?>
-		</div>
-
-		<!-- sidebar content -->
-		<?php if($sidebar): ?>
-		<div id='sidebar'>
-			<?php echo $sidebar; ?>
-		</div>
-		<?php endif; ?>
-
+	<div id="content" class="demo-card-wide mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title">
+	    <h2 class="mdl-card__title-text"><?php echo $title; ?></h2>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+	    <?php echo $content; ?>
+	  </div>
+	  <div class="mdl-card__menu">
+	    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+	      <i class="material-icons">share</i>
+	    </button>
+	  </div>
+	</div>
 	</div>
 
 	<!-- footer -->
-	<footer id='footer'>
-		<p>
-		Powered by <a href='http://processwire.com'>ProcessWire CMS</a>  &nbsp; / &nbsp; 
-		<?php 
-		if($user->isLoggedin()) {
-			// if user is logged in, show a logout link
-			echo "<a href='{$config->urls->admin}login/logout/'>Logout ($user->name)</a>";
-		} else {
-			// if user not logged in, show a login link
-			echo "<a href='{$config->urls->admin}'>Admin Login</a>";
-		}
-		?>
-		</p>
-	</footer>
-
+			<footer class="mdl-mini-footer">
+				<div class="mdl-mini-footer__left-section">
+					<div class="mdl-logo"><a href="/" style="text-decoration:none;color:white">Giggle</a></div>
+					<ul class="mdl-mini-footer__link-list">
+						<?php 
+					if($user->
+						isLoggedin()) {
+						// if user is logged in, show a logout link
+						echo "
+						<li>
+							<a href='{$config->urls->admin}login/logout/'>Logout ($user->name)</a>
+						</li>
+						";
+					} else {
+						// if user not logged in, show a login link
+						echo "
+						<li>
+							<a href='{$config->urls->admin}'>Admin Login</a>
+						</li>
+						";
+					}
+				  ?>
+					</ul>
+				</div>
+			</footer>	
 </body>
 </html>
