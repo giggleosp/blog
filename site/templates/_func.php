@@ -56,6 +56,12 @@ function renderNav(PageArray $items) {
 	return $out;
 }
 
+function getLastBlogId() {
+	foreach ($templates as $template) {
+		echo $template;
+	}
+}
+
 
 
 /**

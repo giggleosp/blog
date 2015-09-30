@@ -6,7 +6,7 @@
 // Primary content is the page body copy and navigation to children. 
 // See the _func.php file for the renderNav() function example
 $content = $page->body . renderNav($page->children); 
-
+$blog_post = false;
 $hide_published_details = $page->hide_published_details;
 $author = "Enda"; // author is always going to be Enda :)
 $published_date = date('d-M-y', $page->created);

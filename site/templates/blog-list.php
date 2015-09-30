@@ -1,6 +1,6 @@
 <?php 
 
-$hide_published_details = $page->hide_published_details;
+$blog_list = true;
 
 $entries = $pages->find('template=blog-entry');
 

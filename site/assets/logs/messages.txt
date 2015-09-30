@@ -1,3 +1,6 @@
 2015-09-29 18:32:29	admin	http://localhost/processwire/page/sort/	Updated sort for 1 pages
 2015-09-29 18:32:55	admin	http://localhost/processwire/page/sort/	Updated sort for 1 pages
 2015-09-30 10:50:14	admin	http://localhost/processwire/setup/template/removeFields	Deleted field "body" data in 0 row(s) from 0 page(s). [page-by-page]
+2015-09-30 16:07:55	admin	http://localhost/processwire/setup/template/removeFields	Deleted field "hide_published_details" data in 0 row(s) from 0 page(s). [page-by-page]
+2015-09-30 16:08:57	admin	http://localhost/processwire/setup/template/removeFields	Deleted field "hide_published_details" data in 1 row(s) from 1 page(s). [page-by-page]
+2015-09-30 16:10:35	admin	http://localhost/processwire/setup/template/removeFields	Deleted field "is_blog_post" data in 0 row(s) from 0 page(s). [page-by-page]

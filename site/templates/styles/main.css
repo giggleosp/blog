@@ -24,6 +24,14 @@ h2 {
 	font-size: 30px;
 }
 
+h3 {
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
 .nav-search-left-spacer {
 	margin-right: 20px;
 }
@@ -62,4 +70,19 @@ h2 {
 .published-details {
 	color:#3F51B5;
 	margin: 10px 0 10px 5px;
+}
+
+.btn-new-post {
+	background-color: #F44336;
+	position: fixed;
+	bottom:20px;
+	right: 20px;
+}
+
+.btn-new-post:hover {
+	background-color: #D32F2F;
+}
+
+.btn-new-post > .material-icons {
+	color:white;
 }

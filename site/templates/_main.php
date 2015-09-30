@@ -38,6 +38,7 @@
 	<meta name="description" content="<?php echo $page->summary; ?>" />
 	<link rel="stylesheet" href="<?php echo $config->urls->templates?>styles/material.min.css">
 	<script src="<?php echo $config->urls->templates?>scripts/material.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -122,7 +123,7 @@
 		    <?php echo $content; ?>
 		  </div>
 		  <?php
-		  	if(!$hide_published_details) {
+		  	if($blog_post) {
 		  		echo "<div class='mdl-card__actions mdl-card--border author-div'>
 			    <div class='published-details'>
 			    	<span>Posted by $author on $published_date</span>
@@ -164,6 +165,17 @@
 				  ?>
 					</ul>
 				</div>
-			</footer>	
+			</footer>
+			<?php
+				if($page->editable()) {
+					if($blog_post || $blog_list) {
+					echo "
+					<a href='/processwire/page/add/?parent_id=$page->parentID' class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect btn-new-post'>
+					  <i class='material-icons'>add</i>
+					</a>
+					";
+					}
+				}
+			?>				
 </body>
 </html>

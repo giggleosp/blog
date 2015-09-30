@@ -1,6 +1,6 @@
 <?php 
 
-$hide_published_details = $page->hide_published_details;
+$blog_post = true;
 $author = "Enda"; // author is always going to be Enda :)
 $published_date = date('jS \of F Y \a\t H:i', $page->created);
 $content = $page->body;
