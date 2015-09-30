@@ -1,3 +1,8 @@
 2015-09-29 16:15:45	admin	http://localhost/blog/	Parse Error: 	syntax error, unexpected end of file (line 1 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
 2015-09-29 16:15:55	admin	http://localhost/blog/	Parse Error: 	syntax error, unexpected end of file (line 1 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
 2015-09-29 16:15:59	admin	http://localhost/blog/	Parse Error: 	syntax error, unexpected end of file (line 1 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
+2015-09-29 18:57:31	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected '<' (line 130 of C:\dev\github\giggleosp\blog\site\templates\_main.php)
+2015-09-29 18:57:42	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected '>' (line 130 of C:\dev\github\giggleosp\blog\site\templates\_main.php)
+2015-09-30 10:10:50	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected '$published_date' (T_VARIABLE) (line 4 of C:\dev\github\giggleosp\blog\site\templates\blog-entry.php)
+2015-09-30 10:21:46	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected '<' (line 134 of C:\dev\github\giggleosp\blog\site\templates\_main.php)
+2015-09-30 10:22:23	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected 'mdl' (T_STRING), expecting ',' or ';' (line 136 of C:\dev\github\giggleosp\blog\site\templates\_main.php)

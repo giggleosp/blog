@@ -114,37 +114,36 @@
 		<button type='submit' name='submit'>Search</button>
 	</form>
 
-	<!-- breadcrumbs -->
-	<div class='breadcrumbs'><?php 
-		// breadcrumbs are the current page's parents
-		foreach($page->parents() as $item) {
-			echo "<span><a href='$item->url'>$item->title</a></span> "; 
-		}
-		// optionally output the current page as the last item
-		echo "<span>$page->title</span> "; 
-	?></div>
-
 	<div id="main">
 		<!-- Wide card with share menu button -->
-	<style>
-	.demo-card-wide > .mdl-card__title {
-	  background: url("<?php echo $image->url; ?>") center / cover;
-	}
-	</style>
+		<style>
+		.demo-card-wide > .mdl-card__title {
+		  background: url("<?php echo $image->url; ?>") center / cover;
+		}
+		</style>
 
-	<div id="content" class="demo-card-wide mdl-card mdl-shadow--2dp">
-	  <div class="mdl-card__title">
-	    <h2 class="mdl-card__title-text"><?php echo $title; ?></h2>
-	  </div>
-	  <div class="mdl-card__supporting-text">
-	    <?php echo $content; ?>
-	  </div>
-	  <div class="mdl-card__menu">
-	    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-	      <i class="material-icons">share</i>
-	    </button>
-	  </div>
-	</div>
+		<div id="content" class="demo-card-wide mdl-card mdl-shadow--2dp">
+		  <div class="mdl-card__title">
+		    <h2 class="mdl-card__title-text"><?php echo $title; ?></h2>
+		  </div>
+		  <div class="mdl-card__supporting-text">
+		    <?php echo $content; ?>
+		  </div>
+		  <?php
+		  	if(!$hide_published_details) {
+		  		echo "<div class='mdl-card__actions mdl-card--border author-div'>
+			    <div class='published-details'>
+			    	<span>Posted by <?php echo $author; ?> on <?php echo $published_date; ?></span>
+			    </div>
+			  </div>";
+		  	} 
+		  ?>
+		  <div class="mdl-card__menu">
+		    <!-- <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+		      <i class="material-icons">share</i>
+		    </button> -->
+		  </div>
+		</div>
 	</div>
 
 	<!-- footer -->

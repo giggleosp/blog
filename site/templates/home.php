@@ -7,6 +7,10 @@
 // See the _func.php file for the renderNav() function example
 $content = $page->body . renderNav($page->children); 
 
+$hide_published_details = $page->hide_published_details;
+$author = "Enda"; // author is always going to be Enda :)
+$published_date = date('d-M-y', $page->created);
+
 // if there are images, lets choose one to output in the sidebar
 if(count($page->images)) {
 	// if the page has images on it, grab one of them randomly... 
@@ -16,7 +20,7 @@ if(count($page->images)) {
 	// output the image at the top of the sidebar...
 	$sidebar = "<img src='$image->url' alt='$image->description' />";
 	// ...and append sidebar text under the image
-	$sidebar .= $page->sidebar;	
+	$sidebar .= $page->sidebar;
 } else {
 	// no images... 
 	// append sidebar text if the page has it

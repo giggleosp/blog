@@ -16,12 +16,21 @@ body, h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 	font-family: 'Roboto', sans-serif;
 }
 
+.published-date {
+	font-size: 14px;
+}
+
 h2 {
 	font-size: 30px;
 }
 
 .nav-search-left-spacer {
 	margin-right: 20px;
+}
+
+#content {
+	margin-top: 90px;
+	margin-bottom: 60px;
 }
 
 .mdl-navigation__link {
@@ -34,9 +43,11 @@ h2 {
 
 .demo-card-wide.mdl-card {
 	margin: 0 auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
 	width: 900px;
+}
+
+.posted-by {
+
 }
 
 .demo-card-wide > .mdl-card__title {
@@ -46,4 +57,9 @@ h2 {
 
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
+}
+
+.published-details {
+	color:#3F51B5;
+	margin: 10px 0 10px 5px;
 }
