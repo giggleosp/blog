@@ -128,12 +128,13 @@
 		  </div>
 		  <div class="mdl-card__supporting-text">
 		    <?php echo $content; ?>
+		    <?php echo $author; ?>
 		  </div>
 		  <?php
 		  	if(!$hide_published_details) {
 		  		echo "<div class='mdl-card__actions mdl-card--border author-div'>
 			    <div class='published-details'>
-			    	<span>Posted by <?php echo $author; ?> on <?php echo $published_date; ?></span>
+			    	<span>Posted by $author on $published_date</span>
 			    </div>
 			  </div>";
 		  	} 
