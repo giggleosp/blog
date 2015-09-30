@@ -103,19 +103,11 @@
 			?>
 	    </nav>
 	  </div>
-	  <main class="mdl-layout__content">
-	    <div class="page-content"><!-- Your content goes here --></div>
-	  </main>
 	</div>
 
-	<!-- search form-->
-	<form class='search' action='<?php echo $pages->get('template=search')->url; ?>' method='get'>
-		<input type='text' name='q' placeholder='Search' value='<?php echo $sanitizer->entities($input->whitelist('q')); ?>' />
-		<button type='submit' name='submit'>Search</button>
-	</form>
-
 	<div id="main">
-		<!-- Wide card with share menu button -->
+		<div class="mdl-grid">
+			<!-- Wide card with share menu button -->
 		<style>
 		.demo-card-wide > .mdl-card__title {
 		  background: url("<?php echo $image->url; ?>") center / cover;
@@ -128,7 +120,6 @@
 		  </div>
 		  <div class="mdl-card__supporting-text">
 		    <?php echo $content; ?>
-		    <?php echo $author; ?>
 		  </div>
 		  <?php
 		  	if(!$hide_published_details) {
@@ -144,6 +135,7 @@
 		      <i class="material-icons">share</i>
 		    </button> -->
 		  </div>
+		</div>
 		</div>
 	</div>
 

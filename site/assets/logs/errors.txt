@@ -7,3 +7,5 @@
 2015-09-30 10:21:46	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected '<' (line 134 of C:\dev\github\giggleosp\blog\site\templates\_main.php)
 2015-09-30 10:22:23	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected 'mdl' (T_STRING), expecting ',' or ';' (line 136 of C:\dev\github\giggleosp\blog\site\templates\_main.php)
 2015-09-30 13:29:24	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected '<' (line 137 of C:\dev\github\giggleosp\blog\site\templates\_main.php)
+2015-09-30 13:44:00	admin	http://localhost/blog/	Parse Error: 	syntax error, unexpected '}' (line 9 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
+2015-09-30 13:46:55	admin	http://localhost/blog/	Parse Error: 	syntax error, unexpected ''}><h2>{$entry->title}</h2></a' (T_ENCAPSED_AND_WHITESPACE), expecting '}' (line 8 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
