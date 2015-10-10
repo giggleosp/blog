@@ -11,7 +11,7 @@ body {
 	background-color: #F5F5F5;
 }
 
-body, h1, h2, h3, h4, h5, h6, .mdl-layout-title {
+body, h1, h2, h3, h4, h5, h6, p, .mdl-layout-title {
 	/*font-family: "Droid Sans";*/
 	font-family: 'Roboto', sans-serif;
 }
@@ -85,4 +85,23 @@ h4 {
 
 .btn-new-post > .material-icons {
 	color:white;
+}
+
+.small-date {
+	font-size: 15px;
+	color: #3F51B5;
+}
+
+a {
+	color: #F44336;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #D32F2F;
+}
+
+p {
+	font-size: 15px;
+	color: #212121;
 }

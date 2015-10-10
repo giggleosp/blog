@@ -170,7 +170,7 @@
 				if($page->editable()) {
 					if($blog_post || $blog_list) {
 					echo "
-					<a href='/processwire/page/add/?parent_id=$page->parentID' class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect btn-new-post'>
+					<a href='/processwire/page/add/?parent_id=1014' class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect btn-new-post'>
 					  <i class='material-icons'>add</i>
 					</a>
 					";

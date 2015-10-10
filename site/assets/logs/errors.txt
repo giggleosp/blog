@@ -9,3 +9,7 @@
 2015-09-30 13:29:24	admin	http://localhost/blog/hello-world/	Parse Error: 	syntax error, unexpected '<' (line 137 of C:\dev\github\giggleosp\blog\site\templates\_main.php)
 2015-09-30 13:44:00	admin	http://localhost/blog/	Parse Error: 	syntax error, unexpected '}' (line 9 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
 2015-09-30 13:46:55	admin	http://localhost/blog/	Parse Error: 	syntax error, unexpected ''}><h2>{$entry->title}</h2></a' (T_ENCAPSED_AND_WHITESPACE), expecting '}' (line 8 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
+2015-10-01 22:02:58	admin	http://localhost/blog/	Error: 	Call to undefined function shortenText() (line 9 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
+2015-10-04 18:59:53	admin	http://localhost/blog/	Compile Error: 	Can't use function return value in write context (line 10 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
+2015-10-04 19:01:28	admin	http://localhost/blog/	Error: 	Call to a member function getRandom() on null (line 9 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
+2015-10-04 19:01:33	admin	http://localhost/blog/	Error: 	Call to a member function getRandom() on null (line 9 of C:\dev\github\giggleosp\blog\site\templates\blog-list.php)
